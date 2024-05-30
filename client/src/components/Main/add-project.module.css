@@ -1,0 +1,85 @@
+.form {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cancel {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: 8em;
+  margin-right: 10px;
+}
+
+.cancel:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+.cancel:active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+  transform: scale(0.96);
+}
+
+.save {
+  background-color: rgb(24, 24, 24);
+  color: white;
+  margin-right: 0px;
+}
+.save:hover {
+  background-color: #373737;
+}
+.save:active {
+  background-color: #000000;
+}
+.form label {
+  display: block;
+  font-size: 1em;
+  color: grey;
+}
+.form input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: rgb(220, 219, 219);
+  width: 80%;
+  height: 1.6em;
+  font-size: 1.2em;
+  padding: 0.1em 0.5em;
+}
+.form textarea {
+  font-size: 1.2em;
+  height: 75px;
+  font-size: 1.6em;
+  padding: 0.5em;
+}
+.form input:focus,
+textarea:focus {
+  border-bottom: 2px solid gray;
+}
+.buttons {
+  width: 82%;
+  display: flex;
+  justify-content: flex-end;
+}

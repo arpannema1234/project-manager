@@ -1,0 +1,108 @@
+.side {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  min-height: 100%;
+  margin-top: 20px;
+  border-top-right-radius: 30px;
+  padding: 2em;
+}
+.head1 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.button {
+  appearance: none;
+  background-color: #5f5c5ced;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 70%;
+  will-change: transform;
+}
+
+.button-27:hover {
+  box-shadow: white 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.project-list {
+  color: white;
+  padding: 1.3em;
+  scroll-behavior: smooth;
+}
+.project-name {
+  cursor: pointer;
+  font-size: larger;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 0em;
+  padding: 0.7em;
+  border-radius: 5px;
+}
+.project-name:hover {
+  background-color: rgb(53, 53, 53);
+}
+.active {
+  background-color: rgb(53, 53, 53);
+}
+.both {
+  display: flex;
+  transition: all 10s ease-in-out;
+}
+.collapse {
+  display: none;
+}
+@media screen and (max-width: 966px) {
+  .side {
+    display: none;
+  }
+  .listicon {
+    cursor: pointer;
+  }
+  .collapse {
+    color: white;
+    display: block;
+    width: 100%;
+    min-height: 100dvh;
+    margin-top: 20px;
+    border-top-right-radius: 15px;
+    padding: 1em;
+    background-color: black;
+  }
+  .extra {
+    position: absolute;
+    z-index: 10;
+    width: 250px;
+  }
+  .head1 {
+    font-size: 1em;
+  }
+}

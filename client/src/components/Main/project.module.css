@@ -1,0 +1,47 @@
+.project-main {
+  margin-left: 1em;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading h1 {
+  font-size: 3em;
+  margin: 0;
+  width: 80%;
+}
+.dateSkeleton {
+  width: 40%;
+}
+.desc {
+  white-space: "pre-line";
+}
+.list {
+  margin-top: 1.3em;
+  width: 40%;
+}
+@media screen and (max-width: 900px) {
+  .dateSkeleton {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heading h1 {
+    font-size: 2.3em;
+    margin: 0;
+    width: 80%;
+  }
+  .project-main p {
+    font-size: 0.7em;
+  }
+  .heading h2 {
+    font-size: 2em;
+  }
+  .desc {
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,33 @@
+.list {
+  padding-left: 10px;
+}
+.element {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  width: 70%;
+}
+button {
+  font-size: 1.2rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0.5em;
+  transition: all 0.2s;
+}
+button:hover {
+  background-color: rgb(198, 198, 198);
+}
+button:active {
+  background-color: rgb(164, 161, 161);
+}
+.element span {
+  align-self: center;
+}
+@media screen and (max-width: 500px) {
+  .element span,
+  button {
+    font-size: 0.9em;
+  }
+}
