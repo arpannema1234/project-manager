@@ -1,11 +1,28 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const mongoose = require("mongoose");
 const Projects = require("./model");
 const port = process.env.PORT || 8080;
 app.use(express.json());
-
+const prodOrigins = [process.env.ORIGIN_1, process.env.ORIGIN_2];
+const devOrigin = ["http://localhost:5173/"];
+const allowedOrigins =
+  process.env.NODE_ENV === "production" ? prodOrigins : devOrigin;
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        console.log(origin, allowedOrigins);
+        return callback(null, true);
+      } else {
+        return callback(new Error("Not allowed by CORS"));
+      }
+    },
+  })
+);
 const username = process.env.MONGO_USERNAME;
 const password = process.env.MONGO_PASSWORD;
 
