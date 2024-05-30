@@ -81,7 +81,7 @@ export default function Project() {
       <h2>Tasks</h2>
       <Addtask addTask={addTasktoProject} />
       {project ? (
-        <TaskList tasks={project.tasks} deleteIndex={deleteIndex} />
+        <TaskList tasks={project.tasks || []} deleteIndex={deleteIndex} />
       ) : (
         <div className={classes.list}>
           <Skeleton count={3} containerClassName={classes.list} />
