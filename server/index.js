@@ -3,20 +3,13 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const Projects = require("./model");
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 app.use(express.json());
 
 const username = process.env.MONGO_USERNAME;
 const password = process.env.MONGO_PASSWORD;
 
 const uri = `mongodb+srv://${username}:${password}@projectmanager.4tygtnr.mongodb.net/project?retryWrites=true&w=majority&appName=projectManager`;
-
-async function connect() {
-  await mongoose.connect(uri);
-}
-async function closeConnection() {
-  await mongoose.connection.close();
-}
 
 mongoose
   .connect(uri)
