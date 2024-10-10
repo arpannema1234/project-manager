@@ -17,8 +17,7 @@ export default function Project() {
     async function getProject() {
       try {
         setProject(undefined);
-        const getLink = `/api/project/${projectId}`;
-        const response = await axios.get(getLink);
+        const response = await axios.get(`/api/project/${projectId}`);
         setProject(response.data);
       } catch (err) {
         console.log("Error fetching Project");
